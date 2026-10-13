@@ -3,7 +3,7 @@
 Application pour relever l'état des 14 communes déléguées de Noyant-Villages avec les maires délégués.
 Elle fonctionne **sans connexion** et **toutes les données restent sur la tablette**.
 
-Adresse de l'application : **(à compléter après la mise en ligne)**
+Adresse de l'application : **https://cjayconseil-max.github.io/edl-noyant/**
 
 ## 1. Installer sur la Galaxy Tab S9 (une seule fois, avec le Wi-Fi)
 

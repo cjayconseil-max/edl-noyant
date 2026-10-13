@@ -1,5 +1,5 @@
 // Met l'application en ligne : construit le dossier dist puis l'envoie sur la branche gh-pages du dépôt GitHub.
-import { execFileSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { rmSync, writeFileSync } from 'node:fs';
 
 const lancer = (cmd, args, options = {}) => execFileSync(cmd, args, { stdio: 'inherit', ...options });
@@ -9,7 +9,7 @@ const depot = lire(['remote', 'get-url', 'origin']);
 const nom = lire(['config', 'user.name']);
 const mel = lire(['config', 'user.email']);
 
-lancer(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'build'], { shell: true });
+execSync('npm run build', { stdio: 'inherit' });
 writeFileSync('dist/.nojekyll', '');
 rmSync('dist/.git', { recursive: true, force: true });
 const git = (...args) => lancer('git', args, { cwd: 'dist' });
