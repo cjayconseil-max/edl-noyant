@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dev-dist/
+test-results/
+playwright-report/
+# Classeur d'origine : il reste sur le PC, seul le modèle nettoyé (public/modele.xlsx) est publié
+Etats_des_lieux_Noyant-Villages.xlsx
